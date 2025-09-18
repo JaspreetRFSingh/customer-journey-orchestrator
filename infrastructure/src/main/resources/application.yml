@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: journey-orchestrator
+
+# Actuator endpoints for observability
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.journey.orchestrator: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# Journey orchestrator configuration
+journey:
+  orchestrator:
+    max-concurrent-executions: 1000
+    default-timeout-seconds: 300
+    enable-re-entry: false
+    
+  event-processor:
+    high-priority-threads: 4
+    normal-priority-threads: 8
+    queue-capacity: 10000
+    deduplication-window-minutes: 5
+    
+  profile:
+    cache-max-size: 100000
+    cache-expiry-hours: 24
+    
+  channel:
+    rate-limits:
+      email: 100
+      sms: 50
+      push: 200
+      in-app: 500
