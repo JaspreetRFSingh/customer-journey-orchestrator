@@ -428,3 +428,11 @@ Contributions are welcome! Please read our contributing guidelines before submit
 ---
 
 *Last updated: April 2026*
+
+## Performance Benchmarks
+
+| Metric | Target |
+|--------|--------|
+| Event throughput | 10,000 events/sec |
+| Profile lookup latency | < 1ms (cached) |
+| Journey execution latency | < 100ms per step |
