@@ -436,3 +436,9 @@ Contributions are welcome! Please read our contributing guidelines before submit
 | Event throughput | 10,000 events/sec |
 | Profile lookup latency | < 1ms (cached) |
 | Journey execution latency | < 100ms per step |
+
+## Security Best Practices
+- Non-root container user
+- Read-only root filesystem
+- Resource limits and requests
+- Dependency vulnerability scanning
