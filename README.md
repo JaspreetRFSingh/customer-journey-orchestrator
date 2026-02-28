@@ -442,3 +442,9 @@ Contributions are welcome! Please read our contributing guidelines before submit
 - Read-only root filesystem
 - Resource limits and requests
 - Dependency vulnerability scanning
+
+## Troubleshooting
+
+### Common Issues
+- Memory limits: Adjust JAVA_OPTS MaxRAMPercentage
+- Connection timeouts: Check Kubernetes network policies
