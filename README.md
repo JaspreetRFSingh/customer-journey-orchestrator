@@ -448,3 +448,7 @@ Contributions are welcome! Please read our contributing guidelines before submit
 ### Common Issues
 - Memory limits: Adjust JAVA_OPTS MaxRAMPercentage
 - Connection timeouts: Check Kubernetes network policies
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting PRs.
